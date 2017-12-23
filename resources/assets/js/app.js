@@ -26,6 +26,12 @@ import Tooltip from 'vue-directive-tooltip';
 import 'vue-directive-tooltip/css/index.css';
 Vue.use(Tooltip);
 
+// Gmaps
+import VueGmaps from 'vue-gmaps'
+Vue.use(VueGmaps, {
+  key: 'AIzaSyD6Du0EPDEWM6PjTE3f6gFwJaZ97VgWKtA'
+});
+
 // Custom components
 Vue.component(
     'passport-clients',
@@ -87,6 +93,12 @@ Vue.component(
 Vue.component(
     'journal-content-entry',
     require('./components/journal/partials/JournalContentEntry.vue')
+);
+
+// Activities
+Vue.component(
+    'activity-add',
+    require('./components/activities/AddActivity.vue')
 );
 
 // Settings

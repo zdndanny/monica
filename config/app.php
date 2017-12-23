@@ -163,6 +163,7 @@ return [
         Laravel\Cashier\CashierServiceProvider::class,
         Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
+        'GoogleMaps\ServiceProvider\GoogleMapsServiceProvider',
     ],
 
     /*
@@ -214,6 +215,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'MoneyHelper' => App\Helpers\MoneyHelper::class,
         'Sentry' => Sentry\SentryLaravel\SentryFacade::class,
+        'GoogleMaps' => 'GoogleMaps\Facade\GoogleMapsFacade',
     ],
 
 ];

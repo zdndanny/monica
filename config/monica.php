@@ -106,6 +106,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Use Google Maps for the Geolocation
+    |--------------------------------------------------------------------------
+    |
+    | We can use Google Maps to add locations.
+    |
+    */
+    'enable_google_maps' => env('ENABLE_GOOGLE_MAP', false),
+    'google_maps_api_key' => env('GOOGLE_MAP_API_KEY', ''),
+
+    /*
+    |--------------------------------------------------------------------------
     | Version of the application that you run
     |--------------------------------------------------------------------------
     |

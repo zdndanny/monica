@@ -9,6 +9,7 @@
 
     <!-- Left sidebar -->
     <div class="fl w-70-ns w-100 pa2">
+<input v-model="vm.searchPlace" v-gmaps-searchbox="vm">
 
       <!-- How was your day -->
       <div class="br3 ba b--gray-monica bg-white pa3 mb4" v-if="hasRated != true">
@@ -167,6 +168,11 @@
               showSadSmileyColor: false,
               showHappySmileyColor: false,
               loadingMore: false,
+              vm: {
+                    searchPlace: '',
+                    location: {}
+
+                }
             };
         },
 
