@@ -1,4 +1,20 @@
 <style scoped>
+.button-row {
+  border-color: rgba(0,0,0,0.15);
+  border-bottom-width: 2px;
+  flex-basis: 100%;
+}
+
+.selected {
+  background-color: #28a745;
+  border-color: #28a745;
+  border-bottom-color: rgba(0,0,0,0.15);
+  color: #fff;
+}
+
+.button-container {
+  margin-left: 18px;
+}
 </style>
 
 <template>
@@ -23,18 +39,33 @@
 
         <div class="mb4">
           <p class="b mb2">When was it?</p>
-          <div class="br3 ba b--black-40">
-            <label class="db pa3 bb b--black-20 mb0">
-              <div class="">
-                <span>Some time in the last 7 days</span>
+          <ul class="relative br3 ba b--black-40">
+            <li class="db pa3 bb b--black-20 mb0 pointer">
+              <input type="radio" id="date_predefined" name="date" class="mr1">
+              <label class="mb2 pointer" for="date_predefined">Some time in the last 7 days</label>
+              <select name="" id="" multiple="multiple" class="dn">
+                <option selected="selected" value="1">Mo</option>
+                <option selected="selected" value="2">Tu</option>
+                <option selected="selected" value="3">We</option>
+                <option selected="selected" value="4">Th</option>
+                <option selected="selected" value="5">Fr</option>
+                <option value="6">Sa</option>
+                <option value="0">Su</option>
+              </select>
+              <div class="button-container flex flex-row">
+                <button class="button-row br2 mr2 pa2 selected">Today</button>
+                <button class="button-row br2 mr2 pa2">Yesterday</button>
+                <button class="button-row br2 mr2 pa2">Tue</button>
+                <button class="button-row br2 mr2 pa2">Wed</button>
+                <button class="button-row br2 mr2 pa2">Thu</button>
+                <button class="button-row br2 pa2">Mon</button>
               </div>
-            </label>
-            <label class="db pa3 mb0">
-              <div class="">
-                <span>Let me enter a date…</span>
-              </div>
-            </label>
-          </div>
+            </li>
+            <li class="db pa3 bb b--black-20 mb0 pointer">
+              <input type="radio" id="date_custom" name="date" class="mr1">
+              <label class="mb0 pointer" for="date_custom">Let me enter a date…</label>
+            </li>
+          </ul>
           <input type="text" name="" class="br3 b--gray-monica ba pa3 w-100 f4" placeholder="Indicate...">
         </div>
 
